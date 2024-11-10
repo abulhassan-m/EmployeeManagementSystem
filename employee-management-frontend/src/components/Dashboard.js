@@ -13,7 +13,7 @@ const Dashboard = () => {
         employeesByDepartment: [],
         recentActivities: [],
     });
-    const [chartData, setChartData] = useState({ labels: [], counts: [] });
+    const [setChartData] = useState({ labels: [], counts: [] });
 
     useEffect(() => {
         // Fetch total employees and departments
@@ -42,7 +42,7 @@ const Dashboard = () => {
         fetchStats();
     }, []);
 
-    const data = {
+    /*const data = {
         labels: stats.employeesByDepartment.map(item => item.departmentName),
         datasets: [
             {
@@ -51,7 +51,7 @@ const Dashboard = () => {
                 backgroundColor: 'rgba(75,192,192,0.6)',
             },
         ],
-    };
+    };*/
 
     return (
         <div>

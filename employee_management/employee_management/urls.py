@@ -17,4 +17,3 @@ urlpatterns = [
     path('api/data/employee-distribution/', employee_distribution_data, name='employee-distribution-data'),
     path('api/plotly-chart/employee-distribution/', employee_distribution_html_chart, name='employee-distribution-plotly-chart'),
 ]
-
