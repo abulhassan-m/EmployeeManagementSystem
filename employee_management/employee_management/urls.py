@@ -14,6 +14,7 @@ urlpatterns = [
     path('api/', include(router.urls)),    
     path('api/departments/', include('departments.urls')),  # Include department URLs
     # path('api/token/',  CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/data/employee-distribution/', employee_distribution_data, name='employee-distribution-data'),
     path('api/plotly-chart/employee-distribution/', employee_distribution_html_chart, name='employee-distribution-plotly-chart'),

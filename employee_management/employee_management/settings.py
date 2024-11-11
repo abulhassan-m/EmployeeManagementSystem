@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'employees',
     'departments',
     'rest_framework',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -72,8 +73,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'employee_management.wsgi.application'
-
-INSTALLED_APPS += ['rest_framework_simplejwt']
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
