@@ -7,7 +7,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .models import Employee
-from .serializers import EmployeeSerializer, CustomTokenObtainPairSerializer
+from .serializers import EmployeeSerializer #, CustomTokenObtainPairSerializer
 from .permissions import IsAdminOrManager, IsAdminUser
 
 class EmployeeViewSet(viewsets.ModelViewSet):
@@ -60,5 +60,5 @@ def employee_distribution_html_chart(request):
     html = fig.to_html(full_html=False)
     return HttpResponse(html)
 
-class CustomTokenObtainPairView(TokenObtainPairView):
-    serializer_class = CustomTokenObtainPairSerializer
+""" class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer """
