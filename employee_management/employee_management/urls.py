@@ -13,6 +13,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),    
     path('api/departments/', include('departments.urls')),  # Include department URLs
+    path('api/users/', include('users.urls')),  # Include user registration URLs
     # path('api/token/',  CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
